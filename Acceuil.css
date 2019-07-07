@@ -5,18 +5,32 @@ html {
 
 body {
 
+  animation-name: background;
+  animation-duration: 2s;
 	max-width: 100%;
 	background-image: url(images/Background.JPG);
-	background-size: 100% 40%;
   background-repeat: no-repeat;
-  background-image: fixed;
+  background-position: 100% -3%;
 	font-family: cursive;
 	color: black;
 }
 
+
+@keyframes background {
+
+  from {
+
+    background-position: 1200% -3%;
+  }
+
+  to {
+
+    background-position: 100% -3%;
+  }
+}
+
 div {
 
-  height: 2300px;
   color: black;
   width: 1000px;
 }
@@ -26,6 +40,8 @@ nav {
 	margin-left: 2em;
 	margin-top: 2%;
 	margin-bottom: 14%;
+  animation-name: fondutext ;
+  animation-duration: 4s; 
 } 
 
 
@@ -64,11 +80,11 @@ nav a:hover {
 } 
 
 #section1 {
-  height: 50em;
+  height: 40em;
 }
 
 #section2 {
-  height: 50em;
+  height: 40em;
 }
 
 section {
@@ -79,22 +95,51 @@ section {
 section h1 {
 
 	font-size: 5em;
-  margin-bottom: 0em;
+  margin-bottom: 0em; 
+  animation-name: fondutext ;
+  animation-duration: 4s; 
+}
+
+
+
+@keyframes fondutext {
+
+  0% {
+
+    opacity: 0;
+  }
+
+  20% {
+
+    opacity: 0;
+  }
+
+  100% {
+
+    opacity: 1;
+  }
 }
 
 section h2 {
 
 	font-size: 2em;
+  animation-name: fondutext ;
+  animation-duration: 4s; 
 }
 
 
 /**************************************Boutton Scroll Down **************************************************/
 
+#section07 {
+
+  animation-name: fondutext ;
+  animation-duration: 4s;
+}
 
 .demo a {
 
   position: absolute;
-  bottom:-7%;
+  bottom:-4%;
   left: 27%;
   z-index: 2;
   display: inline-block;

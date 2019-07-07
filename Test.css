@@ -1,0 +1,12 @@
+body{
+
+  max-width: 100%;
+  background-image: url(images/Background.JPG);
+  background-position: 0% 0%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: cursive;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
