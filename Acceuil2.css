@@ -1,33 +1,45 @@
 html {
 
   scroll-behavior: smooth;
+  height: 200%;
+  width: 100%;  
 }
 
 body {
 
 	width: 100%;
 	height: 100%;
-	margin: 0px;
- }
-
- @media screen and (min-width: 200px) and (max-width: 1600px) {
-  }
-
-  @media screen and (max-height: 1600px) and  (min-height: 300px) {
-    }
-
-  
-
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-left: 2em;
+  font-family: Caveat;
+}
 
 #section1{
 
 	width: 100%;
 	height: 50%;
 	background: url(images/Background.JPG);
-  	background-repeat: no-repeat;
-  	background-size: 100% 100%;
-  	margin-left: 2em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation-name: backgroundX;
+  animation-duration: 2s;
 }
+
+@keyframes backgroundX {
+ 
+  from {
+
+    background-position-x: 40em;
+  }
+  
+  to {
+
+    background-position-x: 0em;
+  }
+
+} 
 
 #section2 {
 
@@ -39,9 +51,9 @@ body {
 
 nav {
 
-	margin-top: 2%;
+	padding-top: 2%;
 	margin-bottom: 14%;
-  	animation-name: fondutext ;
+  animation-name: fondutext ;
  	animation-duration: 4s; 
 } 
 
@@ -50,35 +62,31 @@ nav a {
 
 	text-decoration: none;
 	color: black;
-	margin-right: 3em;
+  margin: 0;
 	font-size: 2em;
-	border-bottom: solid 0.25em #1155ccff;
-	padding-bottom: 1%;
-	border-radius: 0.1em;
-	height: 3em;
+  margin-right: 2em;
+  padding-bottom: 0.25em;
+  border-bottom: solid 0.2em #1155ccff;
+  border-radius: 0.2em;
 }
-
 
 nav a:hover {
 
-	border-bottom: solid 0.25em #a4c2f4ff;
-	animation-name: navborder ;
-  	animation-duration: 0.75s;		
+  animation-name: navborder;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 
 @keyframes navborder {
- 
-  from {
-
-  	border-bottom: solid 0.25em #1155ccff;  		
-  }
   
-  to {
+  100% {
 
-  	border-bottom: solid 0.25em #a4c2f4ff;		
+    border-bottom-color: #a4c2f4ff;
   }
 
 } 
+
 
 /**************************************************** SECTION 1 Text ********************************************************/
 
@@ -86,9 +94,9 @@ nav a:hover {
 #Bienvenue {
 
 	font-size: 5em;
-  	margin-bottom: 0em; 
-  	animation-name: fondutext ;
-  	animation-duration: 4s; 
+  margin-bottom: 0em; 
+  animation-name: fondutext ;
+  animation-duration: 4s; 
 }
 
 
@@ -113,15 +121,15 @@ nav a:hover {
 #h2section1 {
 
 	font-size: 2em;
-  	animation-name: fondutext ;
-  	animation-duration: 4s; 
+  animation-name: fondutext ;
+  animation-duration: 4s; 
 }
 
 #section07 {
 
 	height: 45em;
-  	animation-name: fondutext;
-  	animation-duration: 4s;
+  animation-name: fondutext;
+  animation-duration: 4s;
 }
 
 /*********************************************** Flèche ******************************************/
@@ -129,17 +137,17 @@ nav a:hover {
 .demo a {
 
 	position: absolute;
-    top: 91%;
-    left: 30%;
-  	z-index: 2;
-  	display: inline-block;
-  	-webkit-transform: translate(0, -50%);
+  top: 91%;
+  left: 30%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
  	transform: translate(0, -50%);
-  	color: black;
-  	letter-spacing: .1em;
-  	text-decoration: none;
-  	transition: opacity .3s;
-  	margin-right: 2em;
+  color: black;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  margin-right: 2em;
 }
 
 .demo a:hover {

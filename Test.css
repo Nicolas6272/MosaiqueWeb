@@ -1,13 +1,24 @@
-body{
+html {
 
-  max-width: 100%;
-  background: url(images/Background.JPG),
-  				grey;
-  background-position: 0% 0%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  font-family: cursive;
-  color: black;
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.Gauche {
+
+	height: 100%;
+	width: 20%;
+	border-s
+}
+
+.TitreAso {
+
+	margin: 0;
 }
