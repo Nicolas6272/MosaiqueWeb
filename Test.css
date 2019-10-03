@@ -1,24 +1,14 @@
-html {
-
-	height: 100%;
-	width: 100%;
-}
-
 body {
 
-	height: 100%;
-	width: 100%;
-	margin: 0;
+	display: inline-block;
+}
+
+.Droite {
+
+	background-color: blue;
 }
 
 .Gauche {
 
-	height: 100%;
-	width: 20%;
-	border-s
-}
-
-.TitreAso {
-
-	margin: 0;
+	background-color: red;
 }

@@ -45,6 +45,7 @@ body {
 
 	width: 100%;
 	height: 50%;
+  padding-top: 2em;
 }
 
 /************************************************** NAV *******************************************************/
@@ -217,4 +218,32 @@ nav a:hover {
   100% {
     opacity: 0;
   }
+}
+
+
+/******************************************* Section 2 *****************************************/
+
+#titresection2 {
+
+  text-align: center;
+  font-size: 3em;
+  margin-left: -2em; 
+}
+
+#corpsection2 {
+
+}
+
+#imagesection2 {
+
+  width: 30%;
+  margin: 0;
+}
+
+#textesection2 {
+
+  width: 50%; 
+  height: 100%;
+  margin: 0;
+  display: inline;
 }

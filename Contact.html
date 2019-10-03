@@ -43,10 +43,13 @@
 			<script type="text/javascript">
 					// GPS maison
 					// 48.8121402,2.557924
-					// On initialise la latitude et la longitude de Paris (centre de la carte)
+					// On initialise la latitude et la longitude de l'Atelier 
 					var lat = 48.8055132;
 					var lon = 2.5005785;
+					var lonPosition = null;
+					var latPosition = null;
 					var macarte = null;
+					var LocalisationAutoriser = new Boolean(false);
 					// Fonction d'initialisation de la carte
 					function initMap() {
 							// Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
@@ -69,34 +72,50 @@
 									.bindPopup('Atelier Mosaïque')
 									.openPopup();
 					}
-
 					window.onload = function(){
 						// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
 						initMap();
+						initializeLocation();
 					};
 
-					if (navigator.geolocation){
-							navigator.geolocation.getCurrentPosition(function(position)
-							{
-									alert("Latitude : " + position.coords.latitude + ", longitude : " + position.coords.longitude);
-							});
-					} else
-							alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+					//Demande a l'utilisateur s'il veut bien être localiser et initialise sa position si oui 
+					function initializeLocation () {
+						if (navigator.geolocation){
+								navigator.geolocation.getCurrentPosition(function(position)
+								{
+									lonPosition = position.coords.longitude;
+									latPosition = position.coords.latitude;
+									LocalisationAutoriser = true;
 
-				function routeToAtelierMosaique() {
-					L.Routing.control({
-	    			waypoints: [
-	        		L.latLng(48.812158, 2.560193),
-	        		L.latLng(lat,lon)
-	    			],
-	    			routeWhileDragging: true
-					}).addTo(macarte);
+								});
+						} else
+								alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+					}
+
+					//Tracer de l'itinéraire sur la carte 
+					function routeToAtelierMosaique() {
+					
+					if (latPosition!=null && lonPosition!=null) { //Position connue 
+						L.Routing.control({
+		    			waypoints: [ L.latLng(latPosition, lonPosition), L.latLng(lat,lon) ],
+		    			routeWhileDragging: true
+						} ).addTo(macarte);
+					}
+
+					else {
+
+						alert("Vous devez accepter la geolocation");
+						initializeLocation(); //Redemande si l'utilisateur shouaite accepter la localisation
+					}
+
+
+					
 				}
 			</script>
 			<!--<div text-align="center">
 					<a href="https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf6248828296991fb54141bd81e07a2cfd25e5&start=2.557924,48.8121402&end=2.5005785,48.8055132">Y aller depuis la maison à Champigny</a>
 			</div>-->
-			<a href="javascript:routeToAtelierMosaique();">Y aller depuis la maison à Champigny</a>
+			<a href="javascript:routeToAtelierMosaique();">Itinéraire depuis ma position</a>
 		</body>
 
 </html>
