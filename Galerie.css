@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+/* font-family: 'Sriracha', cursive; */
+/* font-family: 'Lemonada', cursive; */
+/* font-family: 'Caveat', cursive; */
 
 html {
 	width: 100%;
@@ -8,7 +14,6 @@ html {
 
 body {
 	margin: 0;
-	font-family: Caveat;
 }
 
 nav {
@@ -59,52 +64,48 @@ nav a:hover {
 
 .colonne {
 	display:inline-block;
-	width: 25%;
+	width: 30%;
 	vertical-align: top;
 }
 
 #colonnegauchephoto {
-	margin-left: 5%;
-	margin-right: 2.5%;
-}
-
-#colonnemilieuphoto {
-	margin-left: 2.5%;
-	margin-right: 2.5%;
+	margin-left: 18%;
+	margin-right: 2%;
 }
 
 #colonnedroitephoto {
-	margin-left: 2.5%;
+	margin-left: 2%;
 }
 
 .photo {
 	width: 100%;
-	margin-bottom: 3%;
-	font-family: 'Sriracha', cursive;
+	height: auto;
+	margin-bottom: 15%;
+	/* font-family: 'Sriracha', cursive; */
+	/* font-family: 'Lemonada', cursive; */
+	font-family: 'Caveat', cursive;
 }
 
 .commentaire {
 	display: inline-block;
-	font-size: 2em;
+	line-height: 50px;
+	font-size: 30px;
 	margin: 0;
+	margin-top: 6%;
 	
 }
 .guillemet {
-	font-size: 5em;
+	font-size: 50px;
 	color: #1155ccff;
-	vertical-align: top;
 }
-
-.commentairetexte {
-	margin: 0;
-	vertical-align: top;
-}
-
 
 img {
 	width: 100%;
-	vertical-align: middle;
-	text-align: center;
+	height: auto;
+}
+
+img:hover {
+	
 }
 
 
